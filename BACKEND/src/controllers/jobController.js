@@ -7,7 +7,28 @@ exports.createJob = async (req, res) => {
       return res.status(403).json({ msg: "Only employers can post jobs" });
     }
 
-    const { title, company } = req.body;
+    const { title, company, registrationDeadline, verificationLink } = req.body;
+
+    // Validate registration deadline
+    if (!registrationDeadline) {
+      return res.status(400).json({ msg: "Registration deadline is required" });
+    }
+
+    const deadline = new Date(registrationDeadline);
+    if (deadline < new Date()) {
+      return res.status(400).json({ msg: "Registration deadline must be in the future" });
+    }
+
+    // Validate verification link
+    if (!verificationLink) {
+      return res.status(400).json({ msg: "Application/verification link is required" });
+    }
+
+    // Basic URL validation
+    const urlPattern = /^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/;
+    if (!urlPattern.test(verificationLink)) {
+      return res.status(400).json({ msg: "Please provide a valid URL for the application link" });
+    }
 
     // Check duplicate
     const existingJob = await Job.findOne({ title, company, employerId: req.user.id });
@@ -28,7 +49,7 @@ exports.createJob = async (req, res) => {
 // GET ALL JOBS (Public)
 exports.getJobs = async (req, res) => {
   try {
-    const jobs = await Job.find().populate('employerId', 'fullname email');
+    const jobs = await Job.find().populate('employerId', 'fullname email').sort({ createdAt: -1 });
     res.json(jobs);
   } catch (err) {
     console.error(err.message);
@@ -56,6 +77,22 @@ exports.updateJob = async (req, res) => {
 
     if (job.employerId.toString() !== req.user.id) {
       return res.status(403).json({ msg: "Not authorized" });
+    }
+
+    // Validate registration deadline if provided
+    if (req.body.registrationDeadline) {
+      const deadline = new Date(req.body.registrationDeadline);
+      if (deadline < new Date()) {
+        return res.status(400).json({ msg: "Registration deadline must be in the future" });
+      }
+    }
+
+    // Validate verification link if provided
+    if (req.body.verificationLink) {
+      const urlPattern = /^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/;
+      if (!urlPattern.test(req.body.verificationLink)) {
+        return res.status(400).json({ msg: "Please provide a valid URL for the application link" });
+      }
     }
 
     // Prevent duplicate when updating title + company
@@ -92,7 +129,7 @@ exports.deleteJob = async (req, res) => {
       return res.status(403).json({ msg: "Not authorized" });
     }
 
-    await job.remove();
+    await job.deleteOne();
     res.json({ msg: "Job deleted" });
   } catch (err) {
     console.error(err.message);

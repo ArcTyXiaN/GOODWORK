@@ -103,9 +103,6 @@ Use an `Authorization: Bearer <token>` header for protected routes.
 - Open a pull request and describe your changes.
 - Run linters and tests (if present) before submitting.
 
-## License
-
-This project has no license file in the repo. If you want to open-source it, consider adding an `MIT` license or another license of your choice.
 
 ## Contact
 

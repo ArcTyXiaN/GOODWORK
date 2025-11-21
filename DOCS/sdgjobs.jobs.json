@@ -1,0 +1,588 @@
+[{
+  "_id": {
+    "$oid": "691f0a173814b029a4ed3b73"
+  },
+  "title": "Full-Stack Developer",
+  "description": "Work on both frontend and backend applications.",
+  "company": "CreativeStudio",
+  "location": "Remote",
+  "salary": 500000,
+  "type": "full-time",
+  "registrationDeadline": {
+    "$date": "2026-12-15T00:00:00.000Z"
+  },
+  "verificationLink": "https://www.jobberman.com/listings/full-stack-developer",
+  "requirements": [
+    "React",
+    "Node.js",
+    "MongoDB",
+    "REST APIs"
+  ],
+  "benefits": [
+    "Remote work",
+    "Performance bonus",
+    "Health insurance"
+  ],
+  "employerId": {
+    "$oid": "691eff16f5c169c1a98a1779"
+  },
+  "status": "open",
+  "createdAt": {
+    "$date": "2025-11-20T12:31:19.019Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "691f0a273814b029a4ed3b74"
+  },
+  "title": "UI/UX Designer",
+  "description": "Design engaging user interfaces.",
+  "company": "DesignHub",
+  "location": "Lagos, Nigeria",
+  "salary": 300000,
+  "type": "contract",
+  "registrationDeadline": {
+    "$date": "2026-11-25T00:00:00.000Z"
+  },
+  "verificationLink": "https://www.jobberman.com/listings/ui-ux-designer",
+  "requirements": [
+    "Figma",
+    "Adobe XD"
+  ],
+  "benefits": [
+    "Remote option",
+    "Project-based bonus"
+  ],
+  "employerId": {
+    "$oid": "691eff16f5c169c1a98a1779"
+  },
+  "status": "open",
+  "createdAt": {
+    "$date": "2025-11-20T12:31:35.383Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "691f0a273814b029a4ed3b75"
+  },
+  "title": "Data Analyst",
+  "description": "Analyze datasets and provide insights.",
+  "company": "DataMinds",
+  "location": "Ibadan, Nigeria",
+  "salary": 350000,
+  "type": "full-time",
+  "registrationDeadline": {
+    "$date": "2026-12-05T00:00:00.000Z"
+  },
+  "verificationLink": "https://www.jobberman.com/listings/data-analyst",
+  "requirements": [
+    "SQL",
+    "Python",
+    "Tableau"
+  ],
+  "benefits": [
+    "Remote work",
+    "Health insurance"
+  ],
+  "employerId": {
+    "$oid": "691eff16f5c169c1a98a1779"
+  },
+  "status": "open",
+  "createdAt": {
+    "$date": "2025-11-20T12:31:35.383Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "691f0c313814b029a4ed3b76"
+  },
+  "title": "Cloud Solutions Architect",
+  "description": "Design and implement scalable cloud solutions for enterprise clients.",
+  "company": "CloudWorks",
+  "location": "Lagos, Nigeria",
+  "salary": 550000,
+  "type": "full-time",
+  "registrationDeadline": {
+    "$date": "2026-12-18T00:00:00.000Z"
+  },
+  "verificationLink": "https://www.jobberman.com/listings/cloud-solutions-architect",
+  "requirements": [
+    "AWS",
+    "Azure",
+    "Microservices Architecture"
+  ],
+  "benefits": [
+    "Health insurance",
+    "Remote work",
+    "Performance bonus"
+  ],
+  "employerId": {
+    "$oid": "691eff16f5c169c1a98a1779"
+  },
+  "status": "open",
+  "createdAt": {
+    "$date": "2025-11-20T12:40:17.306Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "691f0c313814b029a4ed3b77"
+  },
+  "title": "Machine Learning Engineer",
+  "description": "Develop and deploy machine learning models for real-world applications.",
+  "company": "AI Innovations",
+  "location": "Remote",
+  "salary": 600000,
+  "type": "full-time",
+  "registrationDeadline": {
+    "$date": "2026-12-22T00:00:00.000Z"
+  },
+  "verificationLink": "https://www.jobberman.com/listings/machine-learning-engineer",
+  "requirements": [
+    "Python",
+    "TensorFlow",
+    "PyTorch",
+    "Data Analysis"
+  ],
+  "benefits": [
+    "Remote work",
+    "Health insurance",
+    "Training allowance"
+  ],
+  "employerId": {
+    "$oid": "691eff16f5c169c1a98a1779"
+  },
+  "status": "open",
+  "createdAt": {
+    "$date": "2025-11-20T12:40:17.306Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "691f0c313814b029a4ed3b78"
+  },
+  "title": "Cybersecurity Analyst",
+  "description": "Monitor and protect systems against security threats and vulnerabilities.",
+  "company": "SecureNet",
+  "location": "Abuja, Nigeria",
+  "salary": 450000,
+  "type": "full-time",
+  "registrationDeadline": {
+    "$date": "2026-12-20T00:00:00.000Z"
+  },
+  "verificationLink": "https://www.jobberman.com/listings/cybersecurity-analyst",
+  "requirements": [
+    "Network Security",
+    "Penetration Testing",
+    "Firewalls"
+  ],
+  "benefits": [
+    "Health insurance",
+    "Remote option",
+    "Performance bonus"
+  ],
+  "employerId": {
+    "$oid": "691eff16f5c169c1a98a1779"
+  },
+  "status": "open",
+  "createdAt": {
+    "$date": "2025-11-20T12:40:17.306Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "691f0c743814b029a4ed3b79"
+  },
+  "title": "Product Manager",
+  "description": "Oversee product development from concept to launch.",
+  "company": "InnovateTech",
+  "location": "Lagos, Nigeria",
+  "salary": 480000,
+  "type": "full-time",
+  "registrationDeadline": {
+    "$date": "2026-12-28T00:00:00.000Z"
+  },
+  "verificationLink": "https://www.jobberman.com/listings/product-manager",
+  "requirements": [
+    "Leadership",
+    "Agile",
+    "Communication"
+  ],
+  "benefits": [
+    "Health insurance",
+    "Remote work",
+    "Performance bonus"
+  ],
+  "employerId": {
+    "$oid": "691eff16f5c169c1a98a1779"
+  },
+  "status": "open",
+  "createdAt": {
+    "$date": "2025-11-20T12:41:24.772Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "691f0c743814b029a4ed3b7a"
+  },
+  "title": "Business Analyst",
+  "description": "Analyze business processes and provide improvement recommendations.",
+  "company": "BizSolutions",
+  "location": "Abuja, Nigeria",
+  "salary": 350000,
+  "type": "full-time",
+  "registrationDeadline": {
+    "$date": "2026-12-30T00:00:00.000Z"
+  },
+  "verificationLink": "https://www.jobberman.com/listings/business-analyst",
+  "requirements": [
+    "SQL",
+    "Excel",
+    "Process Mapping"
+  ],
+  "benefits": [
+    "Remote option",
+    "Training allowance",
+    "Health insurance"
+  ],
+  "employerId": {
+    "$oid": "691eff16f5c169c1a98a1779"
+  },
+  "status": "open",
+  "createdAt": {
+    "$date": "2025-11-20T12:41:24.772Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "691f0c743814b029a4ed3b7b"
+  },
+  "title": "SEO Specialist",
+  "description": "Optimize website content and improve search engine rankings.",
+  "company": "MarketBoost",
+  "location": "Remote",
+  "salary": 280000,
+  "type": "contract",
+  "registrationDeadline": {
+    "$date": "2026-12-25T00:00:00.000Z"
+  },
+  "verificationLink": "https://www.jobberman.com/listings/seo-specialist",
+  "requirements": [
+    "SEO",
+    "Google Analytics",
+    "Content Strategy"
+  ],
+  "benefits": [
+    "Remote work",
+    "Project-based bonus"
+  ],
+  "employerId": {
+    "$oid": "691eff16f5c169c1a98a1779"
+  },
+  "status": "open",
+  "createdAt": {
+    "$date": "2025-11-20T12:41:24.772Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "691f0cc43814b029a4ed3b7c"
+  },
+  "title": "Frontend Engineer",
+  "description": "Develop responsive and interactive web interfaces.",
+  "company": "TechNova",
+  "location": "Lagos, Nigeria",
+  "salary": 360000,
+  "type": "full-time",
+  "registrationDeadline": {
+    "$date": "2026-12-10T00:00:00.000Z"
+  },
+  "verificationLink": "https://www.jobberman.com/listings/frontend-engineer",
+  "requirements": [
+    "React",
+    "JavaScript",
+    "Tailwind CSS"
+  ],
+  "benefits": [
+    "Remote option",
+    "Health insurance",
+    "Paid leave"
+  ],
+  "employerId": {
+    "$oid": "691eff16f5c169c1a98a1779"
+  },
+  "status": "open",
+  "createdAt": {
+    "$date": "2025-11-20T12:42:44.150Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "691f0cc43814b029a4ed3b7d"
+  },
+  "title": "Backend Engineer",
+  "description": "Build and maintain REST APIs for scalable applications.",
+  "company": "DevSolutions",
+  "location": "Abuja, Nigeria",
+  "salary": 400000,
+  "type": "full-time",
+  "registrationDeadline": {
+    "$date": "2026-12-12T00:00:00.000Z"
+  },
+  "verificationLink": "https://www.jobberman.com/listings/backend-engineer",
+  "requirements": [
+    "Node.js",
+    "Express",
+    "MongoDB"
+  ],
+  "benefits": [
+    "Flexible hours",
+    "Remote option",
+    "Training allowance"
+  ],
+  "employerId": {
+    "$oid": "691eff16f5c169c1a98a1779"
+  },
+  "status": "open",
+  "createdAt": {
+    "$date": "2025-11-20T12:42:44.150Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "691f0cc43814b029a4ed3b7e"
+  },
+  "title": "Mobile Developer",
+  "description": "Develop cross-platform mobile applications using Flutter or React Native.",
+  "company": "AppCraft",
+  "location": "Remote",
+  "salary": 420000,
+  "type": "full-time",
+  "registrationDeadline": {
+    "$date": "2026-12-15T00:00:00.000Z"
+  },
+  "verificationLink": "https://www.jobberman.com/listings/mobile-developer",
+  "requirements": [
+    "Flutter",
+    "React Native",
+    "JavaScript"
+  ],
+  "benefits": [
+    "Remote work",
+    "Health insurance",
+    "Training allowance"
+  ],
+  "employerId": {
+    "$oid": "691eff16f5c169c1a98a1779"
+  },
+  "status": "open",
+  "createdAt": {
+    "$date": "2025-11-20T12:42:44.150Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "691f0cc43814b029a4ed3b7f"
+  },
+  "title": "UI Designer",
+  "description": "Design attractive and user-friendly interfaces.",
+  "company": "DesignPro",
+  "location": "Lagos, Nigeria",
+  "salary": 310000,
+  "type": "contract",
+  "registrationDeadline": {
+    "$date": "2026-12-20T00:00:00.000Z"
+  },
+  "verificationLink": "https://www.jobberman.com/listings/ui-designer",
+  "requirements": [
+    "Figma",
+    "Adobe XD",
+    "Prototyping"
+  ],
+  "benefits": [
+    "Remote option",
+    "Project-based bonus"
+  ],
+  "employerId": {
+    "$oid": "691eff16f5c169c1a98a1779"
+  },
+  "status": "open",
+  "createdAt": {
+    "$date": "2025-11-20T12:42:44.150Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "691f0cc43814b029a4ed3b80"
+  },
+  "title": "UX Researcher",
+  "description": "Conduct user research to improve product experiences.",
+  "company": "UserFirst",
+  "location": "Abuja, Nigeria",
+  "salary": 330000,
+  "type": "full-time",
+  "registrationDeadline": {
+    "$date": "2026-12-18T00:00:00.000Z"
+  },
+  "verificationLink": "https://www.jobberman.com/listings/ux-researcher",
+  "requirements": [
+    "User Research",
+    "Prototyping",
+    "Usability Testing"
+  ],
+  "benefits": [
+    "Remote option",
+    "Health insurance"
+  ],
+  "employerId": {
+    "$oid": "691eff16f5c169c1a98a1779"
+  },
+  "status": "open",
+  "createdAt": {
+    "$date": "2025-11-20T12:42:44.150Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "691f0cc43814b029a4ed3b81"
+  },
+  "title": "Data Scientist",
+  "description": "Analyze data and build predictive models for business insights.",
+  "company": "DataWorks",
+  "location": "Lagos, Nigeria",
+  "salary": 600000,
+  "type": "full-time",
+  "registrationDeadline": {
+    "$date": "2026-12-22T00:00:00.000Z"
+  },
+  "verificationLink": "https://www.jobberman.com/listings/data-scientist",
+  "requirements": [
+    "Python",
+    "Machine Learning",
+    "Data Analysis"
+  ],
+  "benefits": [
+    "Remote work",
+    "Performance bonus",
+    "Health insurance"
+  ],
+  "employerId": {
+    "$oid": "691eff16f5c169c1a98a1779"
+  },
+  "status": "open",
+  "createdAt": {
+    "$date": "2025-11-20T12:42:44.150Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "691f0cc43814b029a4ed3b82"
+  },
+  "title": "DevOps Engineer",
+  "description": "Manage CI/CD pipelines and cloud infrastructure.",
+  "company": "CloudNet",
+  "location": "Remote",
+  "salary": 450000,
+  "type": "full-time",
+  "registrationDeadline": {
+    "$date": "2026-12-28T00:00:00.000Z"
+  },
+  "verificationLink": "https://www.jobberman.com/listings/devops-engineer",
+  "requirements": [
+    "AWS",
+    "Docker",
+    "Kubernetes"
+  ],
+  "benefits": [
+    "Remote work",
+    "Health insurance",
+    "Training allowance"
+  ],
+  "employerId": {
+    "$oid": "691eff16f5c169c1a98a1779"
+  },
+  "status": "open",
+  "createdAt": {
+    "$date": "2025-11-20T12:42:44.150Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "691f0cc43814b029a4ed3b83"
+  },
+  "title": "QA Tester",
+  "description": "Perform software testing to ensure product quality.",
+  "company": "TechNova",
+  "location": "Ibadan, Nigeria",
+  "salary": 300000,
+  "type": "full-time",
+  "registrationDeadline": {
+    "$date": "2026-12-30T00:00:00.000Z"
+  },
+  "verificationLink": "https://www.jobberman.com/listings/qa-tester",
+  "requirements": [
+    "Selenium",
+    "Manual Testing",
+    "Automation"
+  ],
+  "benefits": [
+    "Remote work",
+    "Health insurance"
+  ],
+  "employerId": {
+    "$oid": "691eff16f5c169c1a98a1779"
+  },
+  "status": "open",
+  "createdAt": {
+    "$date": "2025-11-20T12:42:44.150Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "691f0cc43814b029a4ed3b84"
+  },
+  "title": "Technical Writer",
+  "description": "Write documentation for software products and APIs.",
+  "company": "DocuTech",
+  "location": "Remote",
+  "salary": 250000,
+  "type": "contract",
+  "registrationDeadline": {
+    "$date": "2026-12-25T00:00:00.000Z"
+  },
+  "verificationLink": "https://www.jobberman.com/listings/technical-writer",
+  "requirements": [
+    "Technical Writing",
+    "API knowledge",
+    "Markdown"
+  ],
+  "benefits": [
+    "Remote option",
+    "Project-based bonus"
+  ],
+  "employerId": {
+    "$oid": "691eff16f5c169c1a98a1779"
+  },
+  "status": "open",
+  "createdAt": {
+    "$date": "2025-11-20T12:42:44.150Z"
+  },
+  "__v": 0
+}]

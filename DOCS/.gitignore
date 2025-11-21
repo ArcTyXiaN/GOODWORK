@@ -1,8 +1,24 @@
-goodwork.mp4
-GOODWORK_ Find Your Perfect Role.html
-GOODWORK_ Find Your Perfect Role_files
-sdgjobs.jobs.json
-sdgjobs.users.json
+# Ignore media files
+*.mp4
 
-DOCS
-*PURPOSE.md
+# Ignore HTML files
+*.html
+
+# Ignore associated HTML folders
+*_files/
+
+# Ignore JSON data files
+*.json
+
+# Node modules (if you have a Node project)
+node_modules/
+
+# Build/dist folders
+dist/
+build/
+
+# OS/Editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

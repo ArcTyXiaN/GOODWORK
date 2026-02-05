@@ -35,27 +35,27 @@ const Register = () => {
   };
 
   return (
-    <div className="min-h-screen bg-neutral-900 flex items-center justify-center px-4 py-12">
+    <div className="min-h-screen bg-neutral-50 dark:bg-neutral-900 flex items-center justify-center px-4 py-12">
       <div className="max-w-md w-full">
         {/* Logo/Icon */}
         <div className="text-center mb-8">
           <div className="inline-flex items-center justify-center w-20 h-20 bg-amber-500 rounded-full shadow-lg mb-4">
             <Briefcase className="h-10 w-10 text-neutral-900" />
           </div>
-          <h2 className="text-4xl font-extrabold text-neutral-100 mb-2">
+          <h2 className="text-4xl font-extrabold text-neutral-900 dark:text-neutral-100 mb-2">
             Join GOODWORK
           </h2>
-          <p className="text-neutral-400 text-lg">
+          <p className="text-neutral-600 dark:text-neutral-400 text-lg">
             Create your account and start your journey
           </p>
         </div>
 
         {/* Register Card */}
-        <div className="bg-neutral-800 rounded-2xl shadow-2xl p-8 border border-neutral-700">
+        <div className="bg-white dark:bg-neutral-800 rounded-2xl shadow-2xl p-8 border border-neutral-200 dark:border-neutral-700">
           <form onSubmit={handleSubmit} className="space-y-6">
             {/* Full Name Input */}
             <div>
-              <label className="flex items-center space-x-2 text-sm font-semibold text-neutral-100 mb-2">
+              <label className="flex items-center space-x-2 text-sm font-semibold text-neutral-900 dark:text-neutral-100 mb-2">
                 <User className="h-4 w-4 text-amber-500" />
                 <span>Full Name</span>
               </label>
@@ -65,14 +65,14 @@ const Register = () => {
                 value={form.fullname}
                 onChange={handleChange}
                 placeholder="John Doe"
-                className="w-full px-4 py-3 border border-neutral-700 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent bg-neutral-900 text-neutral-100 transition-all"
+                className="w-full px-4 py-3 border border-neutral-300 dark:border-neutral-700 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent bg-neutral-50 dark:bg-neutral-900 text-neutral-900 dark:text-neutral-100 transition-all"
                 required
               />
             </div>
 
             {/* Email Input */}
             <div>
-              <label className="flex items-center space-x-2 text-sm font-semibold text-neutral-100 mb-2">
+              <label className="flex items-center space-x-2 text-sm font-semibold text-neutral-900 dark:text-neutral-100 mb-2">
                 <Mail className="h-4 w-4 text-amber-500" />
                 <span>Email Address</span>
               </label>
@@ -82,14 +82,14 @@ const Register = () => {
                 value={form.email}
                 onChange={handleChange}
                 placeholder="you@example.com"
-                className="w-full px-4 py-3 border border-neutral-700 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent bg-neutral-900 text-neutral-100 transition-all"
+                className="w-full px-4 py-3 border border-neutral-300 dark:border-neutral-700 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent bg-neutral-50 dark:bg-neutral-900 text-neutral-900 dark:text-neutral-100 transition-all"
                 required
               />
             </div>
 
             {/* Password Input */}
             <div>
-              <label className="flex items-center space-x-2 text-sm font-semibold text-neutral-100 mb-2">
+              <label className="flex items-center space-x-2 text-sm font-semibold text-neutral-900 dark:text-neutral-100 mb-2">
                 <Lock className="h-4 w-4 text-amber-500" />
                 <span>Password</span>
               </label>
@@ -99,14 +99,14 @@ const Register = () => {
                 value={form.password}
                 onChange={handleChange}
                 placeholder="••••••••"
-                className="w-full px-4 py-3 border border-neutral-700 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent bg-neutral-900 text-neutral-100 transition-all"
+                className="w-full px-4 py-3 border border-neutral-300 dark:border-neutral-700 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent bg-neutral-50 dark:bg-neutral-900 text-neutral-900 dark:text-neutral-100 transition-all"
                 required
               />
             </div>
 
             {/* Role Selection */}
             <div>
-              <label className="flex items-center space-x-2 text-sm font-semibold text-neutral-100 mb-2">
+              <label className="flex items-center space-x-2 text-sm font-semibold text-neutral-900 dark:text-neutral-100 mb-2">
                 <Briefcase className="h-4 w-4 text-amber-500" />
                 <span>I am a</span>
               </label>
@@ -116,16 +116,16 @@ const Register = () => {
                   onClick={() => setForm({ ...form, role: "jobseeker" })}
                   className={`p-4 rounded-lg border-2 transition-all ${
                     form.role === "jobseeker"
-                      ? "border-amber-500 bg-neutral-900"
-                      : "border-neutral-700 hover:border-amber-500"
+                      ? "border-amber-500 bg-neutral-50 dark:bg-neutral-900"
+                      : "border-neutral-300 dark:border-neutral-700 hover:border-amber-500"
                   }`}
                 >
                   <div className="text-center">
                     <User className={`h-6 w-6 mx-auto mb-2 ${
-                      form.role === "jobseeker" ? "text-amber-500" : "text-neutral-400"
+                      form.role === "jobseeker" ? "text-amber-500" : "text-neutral-500 dark:text-neutral-400"
                     }`} />
                     <p className={`font-semibold ${
-                      form.role === "jobseeker" ? "text-amber-500" : "text-neutral-100"
+                      form.role === "jobseeker" ? "text-amber-500" : "text-neutral-700 dark:text-neutral-100"
                     }`}>Job Seeker</p>
                   </div>
                 </button>
@@ -135,16 +135,16 @@ const Register = () => {
                   onClick={() => setForm({ ...form, role: "employer" })}
                   className={`p-4 rounded-lg border-2 transition-all ${
                     form.role === "employer"
-                      ? "border-amber-500 bg-neutral-900"
-                      : "border-neutral-700 hover:border-amber-500"
+                      ? "border-amber-500 bg-neutral-50 dark:bg-neutral-900"
+                      : "border-neutral-300 dark:border-neutral-700 hover:border-amber-500"
                   }`}
                 >
                   <div className="text-center">
                     <Briefcase className={`h-6 w-6 mx-auto mb-2 ${
-                      form.role === "employer" ? "text-amber-500" : "text-neutral-400"
+                      form.role === "employer" ? "text-amber-500" : "text-neutral-500 dark:text-neutral-400"
                     }`} />
                     <p className={`font-semibold ${
-                      form.role === "employer" ? "text-amber-500" : "text-neutral-100"
+                      form.role === "employer" ? "text-amber-500" : "text-neutral-700 dark:text-neutral-100"
                     }`}>Employer</p>
                   </div>
                 </button>
@@ -155,8 +155,8 @@ const Register = () => {
             {message && (
               <div className={`p-4 rounded-lg border ${
                 message.includes("successful")
-                  ? "bg-green-900 border-green-700 text-green-200"
-                  : "bg-red-900 border-red-700 text-red-200"
+                  ? "bg-green-100 border-green-300 text-green-700 dark:bg-green-900 dark:border-green-700 dark:text-green-200"
+                  : "bg-red-100 border-red-300 text-red-700 dark:bg-red-900 dark:border-red-700 dark:text-red-200"
               }`}>
                 <p className="text-sm font-semibold text-center">{message}</p>
               </div>
@@ -168,7 +168,7 @@ const Register = () => {
               disabled={loading}
               className={`w-full py-4 px-6 rounded-lg text-neutral-900 font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center justify-center space-x-2 ${
                 loading
-                  ? "bg-neutral-700 cursor-not-allowed"
+                  ? "bg-neutral-300 dark:bg-neutral-700 cursor-not-allowed"
                   : "bg-amber-500 hover:bg-amber-600"
               }`}
             >
@@ -188,7 +188,7 @@ const Register = () => {
 
           {/* Login Link */}
           <div className="mt-6 text-center">
-            <p className="text-neutral-400">
+            <p className="text-neutral-600 dark:text-neutral-400">
               Already have an account?{" "}
               <Link
                 to="/login"
@@ -201,7 +201,7 @@ const Register = () => {
         </div>
 
         {/* Footer */}
-        <p className="text-center text-neutral-400 mt-6 text-sm">
+        <p className="text-center text-neutral-600 dark:text-neutral-400 mt-6 text-sm">
           By creating an account, you agree to our Terms of Service and Privacy Policy
         </p>
       </div>

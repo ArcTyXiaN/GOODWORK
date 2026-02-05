@@ -35,27 +35,27 @@ const Login = () => {
   };
 
   return (
-    <div className="min-h-screen bg-neutral-900 flex items-center justify-center px-4 py-12">
+    <div className="min-h-screen bg-neutral-50 dark:bg-neutral-900 flex items-center justify-center px-4 py-12">
       <div className="max-w-md w-full">
         {/* Logo/Icon */}
         <div className="text-center mb-8">
           <div className="inline-flex items-center justify-center w-20 h-20 bg-amber-500 rounded-full shadow-lg mb-4">
             <Briefcase className="h-10 w-10 text-neutral-900" />
           </div>
-          <h2 className="text-4xl font-extrabold text-neutral-100 mb-2">
+          <h2 className="text-4xl font-extrabold text-neutral-900 dark:text-neutral-100 mb-2">
             Welcome Back
           </h2>
-          <p className="text-neutral-400 text-lg">
+          <p className="text-neutral-600 dark:text-neutral-400 text-lg">
             Sign in to continue to GOODWORK
           </p>
         </div>
 
         {/* Login Card */}
-        <div className="bg-neutral-800 rounded-2xl shadow-2xl p-8 border border-neutral-700">
+        <div className="bg-white dark:bg-neutral-800 rounded-2xl shadow-2xl p-8 border border-neutral-200 dark:border-neutral-700">
           <form onSubmit={handleSubmit} className="space-y-6">
             {/* Email Input */}
             <div>
-              <label className="flex items-center space-x-2 text-sm font-semibold text-neutral-100 mb-2">
+              <label className="flex items-center space-x-2 text-sm font-semibold text-neutral-900 dark:text-neutral-100 mb-2">
                 <Mail className="h-4 w-4 text-amber-500" />
                 <span>Email Address</span>
               </label>
@@ -65,14 +65,14 @@ const Login = () => {
                 value={form.email} 
                 onChange={handleChange} 
                 placeholder="you@example.com" 
-                className="w-full px-4 py-3 border border-neutral-700 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent bg-neutral-900 text-neutral-100 transition-all"
+                className="w-full px-4 py-3 border border-neutral-300 dark:border-neutral-700 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent bg-neutral-50 dark:bg-neutral-900 text-neutral-900 dark:text-neutral-100 transition-all"
                 required
               />
             </div>
 
             {/* Password Input */}
             <div>
-              <label className="flex items-center space-x-2 text-sm font-semibold text-neutral-100 mb-2">
+              <label className="flex items-center space-x-2 text-sm font-semibold text-neutral-900 dark:text-neutral-100 mb-2">
                 <Lock className="h-4 w-4 text-amber-500" />
                 <span>Password</span>
               </label>
@@ -82,7 +82,7 @@ const Login = () => {
                 value={form.password} 
                 onChange={handleChange} 
                 placeholder="••••••••" 
-                className="w-full px-4 py-3 border border-neutral-700 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent bg-neutral-900 text-neutral-100 transition-all"
+                className="w-full px-4 py-3 border border-neutral-300 dark:border-neutral-700 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent bg-neutral-50 dark:bg-neutral-900 text-neutral-900 dark:text-neutral-100 transition-all"
                 required
               />
             </div>
@@ -100,7 +100,7 @@ const Login = () => {
               disabled={loading}
               className={`w-full py-4 px-6 rounded-lg text-neutral-900 font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center justify-center space-x-2 ${
                 loading 
-                  ? 'bg-neutral-700 cursor-not-allowed' 
+                  ? 'bg-neutral-300 dark:bg-neutral-700 cursor-not-allowed' 
                   : 'bg-amber-500 hover:bg-amber-600'
               }`}
             >
@@ -120,7 +120,7 @@ const Login = () => {
 
           {/* Register Link */}
           <div className="mt-6 text-center">
-            <p className="text-neutral-400">
+            <p className="text-neutral-600 dark:text-neutral-400">
               Don't have an account?{' '}
               <Link 
                 to="/register" 
@@ -133,7 +133,7 @@ const Login = () => {
         </div>
 
         {/* Footer */}
-        <p className="text-center text-neutral-400 mt-6 text-sm">
+        <p className="text-center text-neutral-600 dark:text-neutral-400 mt-6 text-sm">
           By signing in, you agree to our Terms of Service and Privacy Policy
         </p>
       </div>

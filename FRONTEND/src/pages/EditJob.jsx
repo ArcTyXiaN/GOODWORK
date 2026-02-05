@@ -88,33 +88,33 @@ const EditJob = () => {
 
   if (loading) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-gray-50 via-indigo-50 to-purple-50 flex items-center justify-center">
+      <div className="min-h-screen bg-gradient-to-br from-gray-50 via-indigo-50 to-purple-50 dark:from-neutral-900 dark:via-neutral-900 dark:to-neutral-900 flex items-center justify-center">
         <div className="text-center">
           <Loader className="h-12 w-12 text-indigo-600 animate-spin mx-auto mb-4" />
-          <p className="text-gray-600 text-lg">Loading job details...</p>
+          <p className="text-gray-600 dark:text-neutral-400 text-lg">Loading job details...</p>
         </div>
       </div>
     );
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-indigo-50 to-purple-50 py-12 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-indigo-50 to-purple-50 dark:from-neutral-900 dark:via-neutral-900 dark:to-neutral-900 py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-3xl mx-auto">
         {/* Header */}
         <div className="text-center mb-10">
           <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-amber-500 to-orange-500 rounded-full mb-4">
             <Save className="h-8 w-8 text-white" />
           </div>
-          <h1 className="text-4xl font-extrabold text-gray-900 mb-2">
+          <h1 className="text-4xl font-extrabold text-gray-900 dark:text-neutral-100 mb-2">
             Edit Job
           </h1>
-          <p className="text-lg text-gray-600">
+          <p className="text-lg text-gray-600 dark:text-neutral-400">
             Update your job posting details
           </p>
         </div>
 
         {/* Form Card */}
-        <div className="bg-white shadow-2xl rounded-2xl overflow-hidden border border-gray-100">
+        <div className="bg-white dark:bg-neutral-800 shadow-2xl rounded-2xl overflow-hidden border border-gray-200 dark:border-neutral-700">
           <div className="bg-gradient-to-r from-amber-500 to-orange-500 px-8 py-6">
             <h2 className="text-2xl font-bold text-white">Job Details</h2>
           </div>
@@ -122,7 +122,7 @@ const EditJob = () => {
           <form onSubmit={handleSubmit} className="p-8 space-y-6">
             {/* Job Title */}
             <div>
-              <label className="flex items-center space-x-2 text-sm font-semibold text-gray-700 mb-2">
+              <label className="flex items-center space-x-2 text-sm font-semibold text-gray-700 dark:text-neutral-100 mb-2">
                 <Briefcase className="h-4 w-4 text-amber-600" />
                 <span>Job Title *</span>
               </label>
@@ -131,7 +131,7 @@ const EditJob = () => {
                 value={form.title}
                 onChange={handleChange}
                 placeholder="Job Title"
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent transition-all"
+                className="w-full px-4 py-3 border border-gray-300 dark:border-neutral-700 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent transition-all dark:bg-neutral-900 dark:text-neutral-100"
                 required
               />
             </div>
@@ -139,7 +139,7 @@ const EditJob = () => {
             {/* Company & Location */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
-                <label className="flex items-center space-x-2 text-sm font-semibold text-gray-700 mb-2">
+                <label className="flex items-center space-x-2 text-sm font-semibold text-gray-700 dark:text-neutral-100 mb-2">
                   <Building2 className="h-4 w-4 text-amber-600" />
                   <span>Company *</span>
                 </label>
@@ -148,13 +148,13 @@ const EditJob = () => {
                   value={form.company}
                   onChange={handleChange}
                   placeholder="Company"
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent transition-all"
+                  className="w-full px-4 py-3 border border-gray-300 dark:border-neutral-700 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent transition-all dark:bg-neutral-900 dark:text-neutral-100"
                   required
                 />
               </div>
 
               <div>
-                <label className="flex items-center space-x-2 text-sm font-semibold text-gray-700 mb-2">
+                <label className="flex items-center space-x-2 text-sm font-semibold text-gray-700 dark:text-neutral-100 mb-2">
                   <MapPin className="h-4 w-4 text-amber-600" />
                   <span>Location *</span>
                 </label>
@@ -163,7 +163,7 @@ const EditJob = () => {
                   value={form.location}
                   onChange={handleChange}
                   placeholder="Location"
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent transition-all"
+                  className="w-full px-4 py-3 border border-gray-300 dark:border-neutral-700 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent transition-all dark:bg-neutral-900 dark:text-neutral-100"
                   required
                 />
               </div>
@@ -172,7 +172,7 @@ const EditJob = () => {
             {/* Job Type & Salary */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
-                <label className="flex items-center space-x-2 text-sm font-semibold text-gray-700 mb-2">
+                <label className="flex items-center space-x-2 text-sm font-semibold text-gray-700 dark:text-neutral-100 mb-2">
                   <Briefcase className="h-4 w-4 text-amber-600" />
                   <span>Job Type *</span>
                 </label>
@@ -180,7 +180,7 @@ const EditJob = () => {
                   name="type"
                   value={form.type}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent transition-all"
+                  className="w-full px-4 py-3 border border-gray-300 dark:border-neutral-700 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent transition-all dark:bg-neutral-900 dark:text-neutral-100"
                 >
                   <option value="full-time">Full-time</option>
                   <option value="part-time">Part-time</option>
@@ -190,7 +190,7 @@ const EditJob = () => {
               </div>
 
               <div>
-                <label className="flex items-center space-x-2 text-sm font-semibold text-gray-700 mb-2">
+                <label className="flex items-center space-x-2 text-sm font-semibold text-gray-700 dark:text-neutral-100 mb-2">
                   <DollarSign className="h-4 w-4 text-amber-600" />
                   <span>Salary (₦)</span>
                 </label>
@@ -200,14 +200,14 @@ const EditJob = () => {
                   onChange={handleChange}
                   placeholder="Salary"
                   type="number"
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent transition-all"
+                  className="w-full px-4 py-3 border border-gray-300 dark:border-neutral-700 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent transition-all dark:bg-neutral-900 dark:text-neutral-100"
                 />
               </div>
             </div>
 
             {/* Registration Deadline */}
             <div>
-              <label className="flex items-center space-x-2 text-sm font-semibold text-gray-700 mb-2">
+              <label className="flex items-center space-x-2 text-sm font-semibold text-gray-700 dark:text-neutral-100 mb-2">
                 <Calendar className="h-4 w-4 text-amber-600" />
                 <span>Application Deadline *</span>
               </label>
@@ -217,17 +217,17 @@ const EditJob = () => {
                 onChange={handleChange}
                 type="date"
                 min={new Date().toISOString().split('T')[0]}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent transition-all"
+                className="w-full px-4 py-3 border border-gray-300 dark:border-neutral-700 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent transition-all dark:bg-neutral-900 dark:text-neutral-100"
                 required
               />
-              <p className="mt-2 text-xs text-gray-500">
+              <p className="mt-2 text-xs text-gray-500 dark:text-neutral-400">
                 Choose the last date candidates can apply for this position
               </p>
             </div>
 
             {/* Verification/Application Link */}
             <div>
-              <label className="flex items-center space-x-2 text-sm font-semibold text-gray-700 mb-2">
+              <label className="flex items-center space-x-2 text-sm font-semibold text-gray-700 dark:text-neutral-100 mb-2">
                 <LinkIcon className="h-4 w-4 text-amber-600" />
                 <span>Application Link *</span>
               </label>
@@ -237,17 +237,17 @@ const EditJob = () => {
                 onChange={handleChange}
                 type="url"
                 placeholder="e.g., https://forms.google.com/your-form or https://company.com/apply"
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent transition-all"
+                className="w-full px-4 py-3 border border-gray-300 dark:border-neutral-700 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent transition-all dark:bg-neutral-900 dark:text-neutral-100"
                 required
               />
-              <p className="mt-2 text-xs text-gray-500">
+              <p className="mt-2 text-xs text-gray-500 dark:text-neutral-400">
                 Provide the link where candidates can apply or submit their application
               </p>
             </div>
 
             {/* Description */}
             <div>
-              <label className="flex items-center space-x-2 text-sm font-semibold text-gray-700 mb-2">
+              <label className="flex items-center space-x-2 text-sm font-semibold text-gray-700 dark:text-neutral-100 mb-2">
                 <FileText className="h-4 w-4 text-amber-600" />
                 <span>Job Description *</span>
               </label>
@@ -256,7 +256,7 @@ const EditJob = () => {
                 value={form.description}
                 onChange={handleChange}
                 placeholder="Description"
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent transition-all h-40 resize-none"
+                className="w-full px-4 py-3 border border-gray-300 dark:border-neutral-700 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent transition-all dark:bg-neutral-900 dark:text-neutral-100 h-40 resize-none"
                 required
               />
             </div>
@@ -266,7 +266,7 @@ const EditJob = () => {
               <button
                 type="button"
                 onClick={() => navigate("/")}
-                className="flex-1 py-4 px-6 rounded-lg bg-gray-200 text-gray-700 font-bold text-lg hover:bg-gray-300 transition-all duration-300"
+                className="flex-1 py-4 px-6 rounded-lg bg-gray-200 text-gray-700 dark:bg-neutral-800 dark:text-neutral-100 dark:hover:bg-neutral-700 font-bold text-lg hover:bg-gray-300 transition-all duration-300"
               >
                 Cancel
               </button>
@@ -276,7 +276,7 @@ const EditJob = () => {
                 disabled={updating}
                 className={`flex-1 py-4 px-6 rounded-lg text-white font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg ${
                   updating
-                    ? "bg-gray-400 cursor-not-allowed"
+                    ? "bg-gray-400 dark:bg-neutral-700 cursor-not-allowed"
                     : "bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600"
                 }`}
               >
@@ -296,8 +296,8 @@ const EditJob = () => {
               <div
                 className={`p-4 rounded-lg text-center font-semibold ${
                   message.includes("success")
-                    ? "bg-green-50 text-green-700 border border-green-200"
-                    : "bg-red-50 text-red-700 border border-red-200"
+                    ? "bg-green-50 text-green-700 border border-green-200 dark:bg-green-900 dark:text-green-200 dark:border-green-700"
+                    : "bg-red-50 text-red-700 border border-red-200 dark:bg-red-900 dark:text-red-200 dark:border-red-700"
                 }`}
               >
                 {message}

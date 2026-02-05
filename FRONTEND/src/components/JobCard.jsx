@@ -29,27 +29,27 @@ const JobCard = ({ job }) => {
   };
 
   return (
-    <div className="bg-neutral-900 border border-neutral-800 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden">
+    <div className="bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden">
       
       {/* Header */}
-      <div className="bg-neutral-800 px-6 py-4 border-b border-neutral-700">
+      <div className="bg-neutral-100 dark:bg-neutral-800 px-6 py-4 border-b border-neutral-200 dark:border-neutral-700">
         <div className="flex justify-between items-start">
           <div className="flex items-center space-x-3">
-            <div className="bg-neutral-900 p-2 rounded-lg shadow-sm">
+            <div className="bg-white dark:bg-neutral-900 p-2 rounded-lg shadow-sm">
               <Building2 className="h-5 w-5 text-amber-200" />
             </div>
 
             <div>
-              <h3 className="text-xl font-semibold text-neutral-100">
+              <h3 className="text-xl font-semibold text-neutral-900 dark:text-neutral-100">
                 {job.title}
               </h3>
-              <p className="text-sm text-neutral-400 font-medium">
+              <p className="text-sm text-neutral-600 dark:text-neutral-400 font-medium">
                 {job.company}
               </p>
             </div>
           </div>
 
-          <span className="px-3 py-1 bg-neutral-700 text-neutral-200 text-xs font-semibold rounded-full uppercase">
+          <span className="px-3 py-1 bg-neutral-200 dark:bg-neutral-700 text-neutral-700 dark:text-neutral-200 text-xs font-semibold rounded-full uppercase">
             {job.type}
           </span>
         </div>
@@ -58,20 +58,20 @@ const JobCard = ({ job }) => {
       {/* Body */}
       <div className="p-6 space-y-4">
 
-        <p className="text-neutral-400 text-sm leading-relaxed line-clamp-3">
+        <p className="text-neutral-600 dark:text-neutral-400 text-sm leading-relaxed line-clamp-3">
           {job.description}
         </p>
 
         {/* Details Grid */}
         <div className="grid grid-cols-2 gap-3 pt-2">
 
-          <div className="flex items-center space-x-2 text-neutral-300">
+          <div className="flex items-center space-x-2 text-neutral-700 dark:text-neutral-300">
             <MapPin className="h-4 w-4 text-amber-300" />
             <span className="text-sm font-medium">{job.location}</span>
           </div>
 
           {job.salary && (
-            <div className="flex items-center space-x-2 text-neutral-300">
+            <div className="flex items-center space-x-2 text-neutral-700 dark:text-neutral-300">
               <DollarSign className="h-4 w-4 text-amber-400" />
               <span className="text-sm font-bold text-amber-400">
                 ₦{job.salary.toLocaleString()}
@@ -79,23 +79,23 @@ const JobCard = ({ job }) => {
             </div>
           )}
 
-          <div className="flex items-center space-x-2 text-neutral-300">
+          <div className="flex items-center space-x-2 text-neutral-700 dark:text-neutral-300">
             <Briefcase className="h-4 w-4 text-amber-300" />
-            <span className="text-xs text-neutral-400">
+            <span className="text-xs text-neutral-600 dark:text-neutral-400">
               {job.employerId?.fullname || 'Company'}
             </span>
           </div>
 
-          <div className="flex items-center space-x-2 text-neutral-300">
+          <div className="flex items-center space-x-2 text-neutral-700 dark:text-neutral-300">
             <Clock className="h-4 w-4 text-amber-300" />
-            <span className="text-xs text-neutral-400">
+            <span className="text-xs text-neutral-600 dark:text-neutral-400">
               {new Date(job.createdAt).toLocaleDateString()}
             </span>
           </div>
         </div>
 
         {/* Deadline Section */}
-        <div className="pt-3 border-t border-neutral-800">
+        <div className="pt-3 border-t border-neutral-200 dark:border-neutral-800">
           <div className="flex items-center justify-between">
             
             <div className="flex items-center space-x-2">
@@ -108,7 +108,7 @@ const JobCard = ({ job }) => {
                     : 'text-amber-300'
                 }`}
               />
-              <span className="text-xs text-neutral-400 font-medium">
+              <span className="text-xs text-neutral-600 dark:text-neutral-400 font-medium">
                 Application Deadline:
               </span>
             </div>
@@ -122,14 +122,14 @@ const JobCard = ({ job }) => {
                 {days} {days === 1 ? 'day' : 'days'} left
               </span>
             ) : (
-              <span className="px-3 py-1 bg-neutral-700 text-neutral-200 text-xs font-bold rounded-full">
+              <span className="px-3 py-1 bg-neutral-200 dark:bg-neutral-700 text-neutral-700 dark:text-neutral-200 text-xs font-bold rounded-full">
                 {days} {days === 1 ? 'day' : 'days'} left
               </span>
             )}
 
           </div>
 
-          <p className="text-xs text-neutral-500 mt-1">
+          <p className="text-xs text-neutral-600 dark:text-neutral-500 mt-1">
             {new Date(job.registrationDeadline).toLocaleDateString('en-US', {
               weekday: 'long',
               year: 'numeric',

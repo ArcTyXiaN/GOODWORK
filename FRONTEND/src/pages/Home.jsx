@@ -83,34 +83,34 @@ const Home = () => {
   };
 
   return (
-    <div className="min-h-screen bg-neutral-900">
+    <div className="min-h-screen bg-neutral-50 dark:bg-neutral-900">
       {/* Hero Section */}
-      <div className="bg-neutral-800 text-neutral-100">
+      <div className="bg-white dark:bg-neutral-800 text-neutral-900 dark:text-neutral-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <div className="text-center">
             <h1 className="text-5xl font-extrabold mb-4 tracking-tight">
               Find Your Dream Job
             </h1>
-            <p className="text-xl text-neutral-400 mb-8">
+            <p className="text-xl text-neutral-600 dark:text-neutral-400 mb-8">
               Connect with top employers and discover amazing opportunities
             </p>
 
             {/* Stats */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-3xl mx-auto">
-              <div className="bg-neutral-800 rounded-xl p-6 border border-neutral-700">
+              <div className="bg-white dark:bg-neutral-800 rounded-xl p-6 border border-neutral-200 dark:border-neutral-700">
                 <Briefcase className="h-8 w-8 mx-auto mb-2 text-amber-500" />
-                <p className="text-3xl font-bold text-neutral-100">{stats.total}</p>
-                <p className="text-sm text-neutral-400">Total Jobs</p>
+                <p className="text-3xl font-bold text-neutral-900 dark:text-neutral-100">{stats.total}</p>
+                <p className="text-sm text-neutral-600 dark:text-neutral-400">Total Jobs</p>
               </div>
-              <div className="bg-neutral-800 rounded-xl p-6 border border-neutral-700">
+              <div className="bg-white dark:bg-neutral-800 rounded-xl p-6 border border-neutral-200 dark:border-neutral-700">
                 <TrendingUp className="h-8 w-8 mx-auto mb-2 text-amber-500" />
-                <p className="text-3xl font-bold text-neutral-100">{stats.open}</p>
-                <p className="text-sm text-neutral-400">Open Positions</p>
+                <p className="text-3xl font-bold text-neutral-900 dark:text-neutral-100">{stats.open}</p>
+                <p className="text-sm text-neutral-600 dark:text-neutral-400">Open Positions</p>
               </div>
-              <div className="bg-neutral-800 rounded-xl p-6 border border-neutral-700">
+              <div className="bg-white dark:bg-neutral-800 rounded-xl p-6 border border-neutral-200 dark:border-neutral-700">
                 <Filter className="h-8 w-8 mx-auto mb-2 text-amber-500" />
-                <p className="text-3xl font-bold text-neutral-100">{filteredJobs.length}</p>
-                <p className="text-sm text-neutral-400">Filtered Results</p>
+                <p className="text-3xl font-bold text-neutral-900 dark:text-neutral-100">{filteredJobs.length}</p>
+                <p className="text-sm text-neutral-600 dark:text-neutral-400">Filtered Results</p>
               </div>
             </div>
           </div>
@@ -119,17 +119,17 @@ const Home = () => {
 
       {/* Search and Filter Section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-8">
-        <div className="bg-neutral-800 rounded-xl shadow-xl p-6 border border-neutral-700">
+        <div className="bg-white dark:bg-neutral-800 rounded-xl shadow-xl p-6 border border-neutral-200 dark:border-neutral-700">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
             {/* Search */}
             <div className="md:col-span-2 relative">
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-neutral-400" />
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-neutral-500 dark:text-neutral-400" />
               <input
                 type="text"
                 placeholder="Search jobs, companies, locations..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full pl-10 pr-4 py-3 border border-neutral-700 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent bg-neutral-900 text-neutral-100 transition-all"
+                className="w-full pl-10 pr-4 py-3 border border-neutral-300 dark:border-neutral-700 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent bg-neutral-50 dark:bg-neutral-900 text-neutral-900 dark:text-neutral-100 transition-all"
               />
             </div>
 
@@ -137,7 +137,7 @@ const Home = () => {
             <select
               value={filterType}
               onChange={(e) => setFilterType(e.target.value)}
-              className="px-4 py-3 border border-neutral-700 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent bg-neutral-900 text-neutral-100 transition-all"
+              className="px-4 py-3 border border-neutral-300 dark:border-neutral-700 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent bg-neutral-50 dark:bg-neutral-900 text-neutral-900 dark:text-neutral-100 transition-all"
             >
               <option value="all">All Types</option>
               <option value="full-time">Full-time</option>
@@ -150,7 +150,7 @@ const Home = () => {
             <select
               value={filterStatus}
               onChange={(e) => setFilterStatus(e.target.value)}
-              className="px-4 py-3 border border-neutral-700 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent bg-neutral-900 text-neutral-100 transition-all"
+              className="px-4 py-3 border border-neutral-300 dark:border-neutral-700 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent bg-neutral-50 dark:bg-neutral-900 text-neutral-900 dark:text-neutral-100 transition-all"
             >
               <option value="all">All Status</option>
               <option value="open">Open</option>
@@ -165,7 +165,7 @@ const Home = () => {
   {loading ? (
     <div className="flex flex-col items-center justify-center py-20">
       <Loader className="h-12 w-12 text-amber-500 animate-spin mb-4" />
-      <p className="text-neutral-400 text-lg">Loading amazing jobs...</p>
+      <p className="text-neutral-600 dark:text-neutral-400 text-lg">Loading amazing jobs...</p>
     </div>
   ) : error ? (
     <div className="text-center py-20">
@@ -174,8 +174,8 @@ const Home = () => {
   ) : filteredJobs.length === 0 ? (
     <div className="text-center py-20">
       <Briefcase className="h-20 w-20 text-neutral-400 mx-auto mb-4" />
-      <p className="text-neutral-100 text-xl font-semibold mb-2">No jobs found</p>
-      <p className="text-neutral-400">Try adjusting your search or filters</p>
+      <p className="text-neutral-900 dark:text-neutral-100 text-xl font-semibold mb-2">No jobs found</p>
+      <p className="text-neutral-600 dark:text-neutral-400">Try adjusting your search or filters</p>
     </div>
   ) : (
     <div className="grid grid-cols-[repeat(auto-fit,minmax(200px,1fr))] gap-6">

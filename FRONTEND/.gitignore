@@ -48,7 +48,6 @@ Desktop.ini
 .env.development.local
 
 # npm / pnpm / yarn
-package-lock.json
 yarn.lock
 pnpm-lock.yaml
 

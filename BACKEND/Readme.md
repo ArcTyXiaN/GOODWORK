@@ -1,7 +1,7 @@
 # GOODWORK - SDG8 Job Platform
 
 **GOODWORK** is a job platform aligned with **SDG 8 (Decent Work and Economic Growth)**.
-The platform allows **employers to post jobs** and **job seekers to browse and apply**. It’s built with a **MERN stack** (MongoDB, Express, React, Node.js).
+The platform allows **employers to post jobs** and **job seekers to browse and apply**. It is built with a **MERN stack** (MongoDB, Express, React, Node.js).
 
 ---
 
@@ -9,9 +9,8 @@ The platform allows **employers to post jobs** and **job seekers to browse and a
 
 ```
 GOODWORK/
-├─ backend/      # Node.js + Express backend
-├─ frontend/     # React frontend (currently empty)
-
+|-- BACKEND/      # Node.js + Express backend
+|-- FRONTEND/     # React frontend (Vite)
 ```
 
 ---
@@ -20,17 +19,17 @@ GOODWORK/
 
 The **backend** handles:
 
-* User authentication (register & login)
-* JWT-based authorization
-* CRUD operations for jobs (create, read, update, delete)
-* Duplicate prevention for job postings
+- User authentication (register & login)
+- JWT-based authorization
+- CRUD operations for jobs (create, read, update, delete)
+- Duplicate prevention for job postings
 
 ### Quick Start (Backend)
 
 1. Go to the backend folder:
 
 ```bash
-cd backend
+cd BACKEND
 ```
 
 2. Install dependencies:
@@ -55,24 +54,19 @@ npm run dev
 
 The backend will run on `http://localhost:5000`.
 
-
-5. Backend [DOCS](https://hackmd.io/@I5OyzHQDSGWGWqeLjg1tSg/H1e535dxZg)
+5. Backend docs (HackMD): https://hackmd.io/@I5OyzHQDSGWGWqeLjg1tSg/H1e535dxZg
 
 ---
 
 ## Frontend
 
-The frontend will be a **React app** that consumes the backend API:
+The frontend is a **React + Vite** app that consumes the backend API:
 
-* API URL: `http://localhost:5000/api/`
-* Will handle user login, job listing, and job posting UI.
-
-> Frontend folder is currently empty. It will be initialized with React later.
+- API URL: `http://localhost:5000/api/`
+- Handles user login, job listing, and job posting UI.
 
 ---
 
 ## License
 
 This project is open source and free to use.
-
----

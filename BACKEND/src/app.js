@@ -5,19 +5,24 @@ const jobRoutes = require('./routes/jobRoutes');
 
 const app = express();
 
-// More flexible CORS for development
+// More flexible CORS for development + Vercel previews
 const allowedOrigins = [
   'https://goodwork-nine.vercel.app',
-  'http://localhost:3000', // Add local development
-  'http://localhost:5173'  // Add Vite default port
+  'http://localhost:3000',
+  'http://localhost:5173',
 ];
+
+const isAllowedOrigin = (origin) => {
+  if (!origin) return true; // Allow requests with no origin (Postman, etc.)
+  if (allowedOrigins.includes(origin)) return true;
+  // Allow any Vercel preview/production domain
+  if (origin.endsWith('.vercel.app')) return true;
+  return false;
+};
 
 app.use(cors({
   origin: function(origin, callback) {
-    // Allow requests with no origin (mobile apps, Postman)
-    if (!origin) return callback(null, true);
-    
-    if (allowedOrigins.indexOf(origin) === -1) {
+    if (!isAllowedOrigin(origin)) {
       return callback(new Error('CORS policy violation'), false);
     }
     return callback(null, true);
